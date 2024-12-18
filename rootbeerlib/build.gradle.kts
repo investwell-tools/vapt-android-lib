@@ -26,6 +26,10 @@ android {
             }
         }
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 
     @Suppress("UnstableApiUsage")
     testOptions {
@@ -103,9 +107,9 @@ publishing {
     }
 }
 
-signing {
-    sign(publishing.publications["release"])
-}
+//signing {
+//    sign(publishing.publications["release"])
+//}
 
 private fun Project.findStringPropertyOrDefault(propertyName: String, default: String? = "") =
     findProperty(propertyName)?.toString() ?: default
