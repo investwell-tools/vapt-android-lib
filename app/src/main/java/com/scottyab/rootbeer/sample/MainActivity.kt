@@ -3,11 +3,12 @@ package com.scottyab.rootbeer.sample
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.iw.mintroot.RootBeer
+import com.rootchecker.service.RootBeerNative
 import com.scottyab.rootbeer.sample.databinding.ActivityMainBinding
 import com.scottyab.rootbeer.sample.extensions.hide
 import com.scottyab.rootbeer.sample.extensions.show
@@ -17,6 +18,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+
 
 class MainActivity : ScopedActivity() {
     private var infoDialog: AlertDialog? = null
@@ -32,8 +34,32 @@ class MainActivity : ScopedActivity() {
                 it.initView()
                 it.resetView()
             }
-//        println("is Emulator ${RootBeer(this).isEmulator}")
 
+        println("Laxmi kant pal sdfnvgm d")
+
+        try {
+            // Simulating an exception for demonstration purposes
+            throw NullPointerException("This is a test exception.")
+        } catch (e:Exception) {
+            e.printStackTrace() // Print the stack trace of the caught exception
+        }
+        val rootBeerNative = RootBeerNative()
+            rootBeerNative.setLoggingEnabled(false)
+        rootBeerNative.logMessage("Laxmi kant")
+
+        rootBeerNative.clearLogs()
+        Log.i("lax", "onCreate: ")
+        Log.d("lax", "Laxmi kant")
+        Log.d("lax", "Laxmi kant22")
+        try {
+            val iiii =1/0
+        }catch (e:Exception){rootBeerNative.handleException(e)}
+        // Log messages using the JNI method; this will respect the global flag
+
+
+
+//        println("is Emulator ${RootBeer(this).isEmulator}")
+        rootBeerNative.logMessage("This message will be logged if enabled.")
     }
 
     private fun ActivityMainBinding.initView() {

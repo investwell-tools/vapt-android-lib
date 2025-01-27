@@ -1,4 +1,4 @@
-package com.iw.mintroot;
+package com.rootchecker.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;

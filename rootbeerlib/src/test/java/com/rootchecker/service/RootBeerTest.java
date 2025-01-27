@@ -1,4 +1,4 @@
-package com.iw.mintroot;
+package com.rootchecker.service;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -14,10 +14,6 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
-
-
-import com.iw.mintroot.RootBeer;
-import com.iw.mintroot.Const;
 
 
 @RunWith(MockitoJUnitRunner.class)
@@ -163,7 +159,7 @@ public class RootBeerTest {
 
     @Test
     public void testAllSuPathsEndWithSlash() {
-        for (String path : com.iw.mintroot.Const.getPaths()) {
+        for (String path : com.rootchecker.service.Const.getPaths()) {
             assertTrue(path.endsWith("/"));
         }
     }

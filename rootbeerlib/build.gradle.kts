@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.iw.mintroot"
+    namespace = "com.rootchecker.service"
 
     defaultConfig {
         ndk {

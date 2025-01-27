@@ -1,7 +1,7 @@
 package com.scottyab.rootbeer.sample
 
 import android.content.Context
-import com.iw.mintroot.RootBeer
+import com.rootchecker.service.RootBeer
 
 class CheckForRootWorker(
     context: Context,

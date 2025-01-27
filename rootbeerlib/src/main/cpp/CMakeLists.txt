@@ -15,6 +15,12 @@ add_library(toolChecker SHARED
         EmulatorDetection.cpp
 )
 
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+    add_definitions(-DDEBUG_BUILD)
+else()
+    add_definitions(-DRELEASE_BUILD)
+endif()
+
 
 target_link_libraries(toolChecker
         android

@@ -11,9 +11,9 @@ extern "C" {
 
 #include <jni.h>
 
-void Java_com_iw_mintroot_RootBeerNative_setLogDebugMessages( JNIEnv* env, jobject thiz, jboolean debug);
+void Java_com_rootchecker_service_RootBeerNative_setLogDebugMessages( JNIEnv* env, jobject thiz, jboolean debug);
 
-int Java_com_iw_mintroot_RootBeerNative_checkForRoot( JNIEnv* env, jobject thiz , jobjectArray pathsArray );
+int Java_com_rootchecker_service_RootBeerNative_checkForRoot( JNIEnv* env, jobject thiz , jobjectArray pathsArray );
 
 
 }
