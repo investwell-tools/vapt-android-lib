@@ -1,4 +1,4 @@
-package com.iw.mintroot.util;
+package com.rootchecker.service.util;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

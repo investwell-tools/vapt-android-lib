@@ -1,9 +1,9 @@
-package com.iw.mintroot;
+package com.rootchecker.service;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
 
-import com.iw.mintroot.util.QLog;
+import com.rootchecker.service.util.QLog;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -18,8 +18,8 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-import static com.iw.mintroot.Const.BINARY_BUSYBOX;
-import static com.iw.mintroot.Const.BINARY_SU;
+import static com.rootchecker.service.Const.BINARY_BUSYBOX;
+import static com.rootchecker.service.Const.BINARY_SU;
 
 /**
  * A simple root checker that gives an *indication* if the device is rooted or not.

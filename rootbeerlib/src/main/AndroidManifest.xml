@@ -1,4 +1,6 @@
-<manifest>
+<manifest
+    package="com.rootchecker.service"
+    >
 
   <application />
 </manifest>
